@@ -1,0 +1,23 @@
+<h2 *ngIf="displayName; then thenBlock; else elseBlock">
+    Testing ngif 
+</h2>
+<ng-template #elseBlock>
+    <h2>
+        Hidden Name
+    </h2>
+</ng-template>
+<ng-template #thenBlock>
+    <h2>
+        Show Name
+    </h2>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">output RED</div>
+    <div *ngSwitchCase="'blue'">output BLUE</div>
+    <div *ngSwitchDefault>Pick Again</div>
+</div>
+<div *ngFor="let item of colors; index as i">
+    <h2>{{item}}</h2>
+</div>
+
