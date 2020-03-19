@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-test',
@@ -13,11 +14,13 @@ export class TestComponent implements OnInit {
 
   public colors=["red","blue","green","yellow"];
 
- 
+  public employees =[];
   
-  constructor() { }
+  constructor(private _employeeService: EmployeeService) { }
 
   ngOnInit(): void {
+    this._employeeService.getEmployees()
+    .subscribe(data => this.employees=data );
   }
 
 }

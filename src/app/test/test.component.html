@@ -17,7 +17,9 @@
     <div *ngSwitchCase="'blue'">output BLUE</div>
     <div *ngSwitchDefault>Pick Again</div>
 </div>
-<div *ngFor="let item of colors; index as i">
-    <h2>{{item}}</h2>
-</div>
 
+<div *ngFor="let employee of employees" class="list-group">
+    <h1 class="list-group-item">{{employee.name}} is my name</h1>
+    <h1 class="list-group-item">{{employee.age}} is my age</h1>
+    <h1 class="list-group-item">{{employee.id}} is my id</h1>
+</div>
