@@ -8,13 +8,15 @@ import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HtmldemoComponent } from './htmldemo/htmldemo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     TestComponent,
-    HomeComponent
+    HomeComponent,
+    HtmldemoComponent
   ],
   imports: [
     BrowserModule,
